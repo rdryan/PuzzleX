@@ -360,10 +360,10 @@ public final class PuzzleActivity extends Activity {
       String completeMsg = 
             getResources().getString(R.string.congratulations) + " " 
             + String.valueOf(board.getMoveCount());
-      String[] insults = getResources().getStringArray(R.array.insults);
+      //String[] insults = getResources().getStringArray(R.array.insults);
       completeMsg += "\n";
-      int insultIndex = (int) Math.floor(Math.random() * insults.length); 
-      completeMsg += insults[insultIndex];
+      //int insultIndex = (int) Math.floor(Math.random() * insults.length); 
+      //completeMsg += insults[insultIndex];
       
       return completeMsg;
    }

@@ -17,10 +17,10 @@
     <string name="picasa_error">Images from Picasa web albums are not supported for this version of Android.</string>
     <string name="grid_size_title">Grid Size</string>
     <string name="grid_size_summary">The number of rows and columns</string>
-    <string name="congratulations">Moves:</string>
-    <string name="about_text">\
-This is free software released under the GPLv3.  Visit 
-http://code.google.com/p/photogaffe to download the source code.  Please use the
- \'Issues\' page on the site for bugs and feature requests.  Enjoy!    
+    <string name="congratulations">Congratulations!\n\nYou have used the following moves:</string>
+    <string name="about_text">
+PuzzleX V1.0\n\n
+Copyright (c) 2014\n
+rdryan@sina.com\n    
     </string>
 </resources>
