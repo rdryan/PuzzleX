@@ -5,6 +5,15 @@
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
         
+    <!-- 配置权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/> 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    
     <application android:icon="@drawable/icon" 
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
         android:allowBackup="true"
@@ -25,5 +34,25 @@
         <activity android:name=".SettingsActivity"
                   android:label="@string/settings">
         </activity>
+        
+        
+        <!-- 添加必须的组件 -->
+        <activity
+	        android:name="net.youmi.android.AdBrowser"
+	        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"            
+	        android:theme="@android:style/Theme.Light.NoTitleBar" >
+	    </activity>
+	    <service
+	        android:name="net.youmi.android.AdService"
+	        android:exported="false" >
+	    </service>
+	    <receiver 
+	        android:name="net.youmi.android.AdReceiver" >
+	        <intent-filter>
+	            <action android:name="android.intent.action.PACKAGE_ADDED" />
+	            <data android:scheme="package" />
+	        </intent-filter>
+	    </receiver>         
+        
     </application>
 </manifest> 

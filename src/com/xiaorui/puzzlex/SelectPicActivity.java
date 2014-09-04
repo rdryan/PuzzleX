@@ -17,6 +17,10 @@ Copyright (C) 2014  Xiao Rui
 
 package com.xiaorui.puzzlex; 
 
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
+import net.youmi.android.diy.banner.DiyAdSize;
+import net.youmi.android.diy.banner.DiyBanner;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +34,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public final class SelectPicActivity extends Activity {
@@ -38,6 +43,18 @@ public final class SelectPicActivity extends Activity {
 	   public void onCreate(Bundle savedInstanceState) {
 	      super.onCreate(savedInstanceState);
 	      setContentView(R.layout.picgrid);
+	      
+		  // 实例化自定义广告条
+		  //LinearLayout adLayout=(LinearLayout)findViewById(R.id.AdLayout2);
+		  //DiyBanner banner = new DiyBanner(this, DiyAdSize.SIZE_MATCH_SCREENx32);
+		  //adLayout.addView(banner);
+		
+		  // 实例化广告条
+		  AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+		  LinearLayout adLayout=(LinearLayout)findViewById(R.id.AdLayout2);
+		  adLayout.addView(adView);
+
+	      
 	        GridView gv = (GridView)findViewById(R.id.GridView1); 
 	        //为GridView设置适配器 
 	        gv.setAdapter(new MyAdapter(this)); 

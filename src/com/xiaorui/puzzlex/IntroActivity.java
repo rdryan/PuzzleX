@@ -17,6 +17,7 @@ Copyright (C) 2011  Wade Chatam
 
 package com.xiaorui.puzzlex; 
 
+import net.youmi.android.AdManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,6 +26,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+
 
 /**
  * This is the introductory Activity for the PhotoGaffe application.  It gives
@@ -44,6 +46,11 @@ public final class IntroActivity extends Activity implements OnClickListener{
       findViewById(R.id.play_button).setOnClickListener(this);
       findViewById(R.id.settings_button).setOnClickListener(this);
       findViewById(R.id.about_button).setOnClickListener(this);
+      
+	  // 初始化接口，应用启动的时候调用
+	  // 参数：appId, appSecret, 调试模式
+	  AdManager.getInstance(this).init("9fec3ba849266a59", "33798bb5602a4ee8", false);
+		 
    }
 
    public void onClick(View v) {
