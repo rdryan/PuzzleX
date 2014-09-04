@@ -27,6 +27,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -166,7 +167,8 @@ private GameBoard(Context context,
                bm = Bitmap.createBitmap(tile_width, 
                                   tile_height, 
                                   bm.getConfig());
-               bm.eraseColor(Color.BLACK);
+               //bm.eraseColor(Color.BLACK);
+               bm.eraseColor(Color.TRANSPARENT);
                theBlankTile = new Tile(bm, row, column);
                tiles.add(theBlankTile);
             } else {
@@ -226,7 +228,6 @@ private GameBoard(Context context,
     * @param tv the TileView that was touched.
     */
    public static void notifyTileViewUpdate(TileView tv) {
-	  PuzzleActivity.playHitSound();
       board.tileViewUpdate(tv);
    }
 
@@ -325,49 +326,52 @@ private GameBoard(Context context,
     */
    private void swapTileWithBlank(TileView tv) {
       Tile tile = tv.getCurrentTile();
+      Animation animation;
       
       TileView theBlankTileView = tileViews.get(
             computeLocationValue(theBlankTile.getCurrentLocation()));
 
       if (tile.getCurrentLocation().isAdjacent(
             theBlankTile.getCurrentLocation())) {
-         /* 
+    	 
          // Animate tile movement
          if (tile.getCurrentLocation().getColumn() < 
             theBlankTile.getCurrentLocation().getColumn()) {
-            theBlankTileView.bringToFront();
+            //theBlankTileView.bringToFront();
             //LEFT
-            theBlankTileView.startAnimation(AnimationUtils.loadAnimation(
-                  this.context, R.anim.left_animation));
+            animation = AnimationUtils.loadAnimation(this.context, R.anim.left_animation);
+            theBlankTileView.startAnimation(animation);
             
          } else if (tile.getCurrentLocation().getColumn() > 
                   theBlankTile.getCurrentLocation().getColumn()) {
-            theBlankTileView.bringToFront();
+            //theBlankTileView.bringToFront();
             //RIGHT
-            theBlankTileView.startAnimation(AnimationUtils.loadAnimation(
-                  this.context, R.anim.right_animation));
+            animation = AnimationUtils.loadAnimation(this.context, R.anim.right_animation);
+            theBlankTileView.startAnimation(animation);
             
          } else if (tile.getCurrentLocation().getRow() < 
                   theBlankTile.getCurrentLocation().getRow()) {
-            theBlankTileView.bringToFront();
-            //UP            
-            theBlankTileView.startAnimation(AnimationUtils.loadAnimation(
-                  this.context, R.anim.up_animation));
+            //theBlankTileView.bringToFront();
+            //UP
+            animation = AnimationUtils.loadAnimation(this.context, R.anim.up_animation);
+            theBlankTileView.startAnimation(animation);
             
          } else if (tile.getCurrentLocation().getRow() > 
                   theBlankTile.getCurrentLocation().getRow()) {
-            theBlankTileView.bringToFront();
+            //theBlankTileView.bringToFront();
             //DOWN
-            theBlankTileView.startAnimation(AnimationUtils.loadAnimation(
-                  this.context, R.anim.down_animation));
+            animation = AnimationUtils.loadAnimation(this.context, R.anim.down_animation);
+            theBlankTileView.startAnimation(animation);
          }
-         */
+         
          theBlankTileView.setCurrentTile(tile);
          tv.setCurrentTile(theBlankTile);
          moveCount++;
+   	     PuzzleActivity.playHitSound();
       }            
 
       if (isCorrect()) {
+    	 PuzzleActivity.playFinishSound();
          ((Activity)context).showDialog(PuzzleActivity.DIALOG_COMPLETED_ID);
       }
    }

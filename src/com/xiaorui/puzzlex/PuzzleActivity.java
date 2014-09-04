@@ -333,6 +333,7 @@ public final class PuzzleActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                dialog.dismiss();
                //board.shuffleTiles();
+               //Will add something here
             }
          });
          dialog = builder.create();
