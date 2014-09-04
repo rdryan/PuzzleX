@@ -21,6 +21,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager.LayoutParams;
@@ -88,16 +89,35 @@ class MyAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) { 
          ImageView imageView; 
             if (convertView == null) { 
-                imageView = new ImageView(context); 
-                imageView.setLayoutParams(new GridView.LayoutParams(320,320));//设置ImageView对象布局 
+                imageView = new SquareImageView(context); 
+                //imageView.setLayoutParams(new GridView.LayoutParams(320,320));//设置ImageView对象布局 
                 imageView.setAdjustViewBounds(false);//设置边界对齐 
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);//设置刻度的类型 
                 imageView.setPadding(8, 8, 8, 8);//设置间距 
             }  
             else { 
-                imageView = (ImageView) convertView; 
+                imageView = (SquareImageView) convertView; 
             } 
             imageView.setImageResource(imgs[position]);//为ImageView设置图片资源 
             return imageView; 
-    } 
+    }
+    
+ 
+ public class SquareImageView extends ImageView {
+        public SquareImageView(Context context) {
+            super(context);
+        }
+        public SquareImageView(Context context, AttributeSet attrs) {
+            super(context, attrs);
+        }
+        public SquareImageView(Context context, AttributeSet attrs, int defStyle) {
+            super(context, attrs, defStyle);
+        }
+        @Override
+        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+            setMeasuredDimension(getMeasuredWidth(), getMeasuredWidth()); //Snap to width
+        }
+    }    
+    
 } 
