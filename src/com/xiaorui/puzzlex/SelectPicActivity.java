@@ -84,7 +84,9 @@ class MyAdapter extends BaseAdapter{
     //Í¼Æ¬Êý×é 
     private Integer[] imgs = { 
             R.drawable.pic0, R.drawable.pic1, R.drawable.pic2, 
-            R.drawable.pic3, R.drawable.pic4
+            R.drawable.pic3, R.drawable.pic4, R.drawable.pic5,
+            R.drawable.pic6, R.drawable.pic7, R.drawable.pic8,
+            R.drawable.pic9, R.drawable.pic10,
     }; 
 
     MyAdapter(Context context){ 

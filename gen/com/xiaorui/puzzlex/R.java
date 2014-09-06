@@ -30,9 +30,15 @@ public final class R {
         public static final int intro_background=0x7f020001;
         public static final int pic0=0x7f020002;
         public static final int pic1=0x7f020003;
-        public static final int pic2=0x7f020004;
-        public static final int pic3=0x7f020005;
-        public static final int pic4=0x7f020006;
+        public static final int pic10=0x7f020004;
+        public static final int pic2=0x7f020005;
+        public static final int pic3=0x7f020006;
+        public static final int pic4=0x7f020007;
+        public static final int pic5=0x7f020008;
+        public static final int pic6=0x7f020009;
+        public static final int pic7=0x7f02000a;
+        public static final int pic8=0x7f02000b;
+        public static final int pic9=0x7f02000c;
     }
     public static final class id {
         public static final int AdLayout2=0x7f0b0007;
