@@ -50,9 +50,9 @@ public final class SelectPicActivity extends Activity {
 		  //adLayout.addView(banner);
 		
 		  // 实例化广告条
-		  AdView adView = new AdView(this, AdSize.FIT_SCREEN);
-		  LinearLayout adLayout=(LinearLayout)findViewById(R.id.AdLayout2);
-		  adLayout.addView(adView);
+		  //AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+		  //LinearLayout adLayout=(LinearLayout)findViewById(R.id.AdLayout2);
+		  //adLayout.addView(adView);
 
 	      
 	        GridView gv = (GridView)findViewById(R.id.GridView1); 
