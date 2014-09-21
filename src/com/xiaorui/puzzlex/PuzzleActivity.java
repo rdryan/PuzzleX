@@ -20,6 +20,9 @@ package com.xiaorui.puzzlex;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
 import net.youmi.android.spot.SpotManager;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -39,6 +42,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 
 /**
@@ -64,7 +68,9 @@ public final class PuzzleActivity extends Activity {
            R.drawable.pic0, R.drawable.pic1, R.drawable.pic2, 
            R.drawable.pic3, R.drawable.pic4, R.drawable.pic5,
            R.drawable.pic6, R.drawable.pic7, R.drawable.pic8,
-           R.drawable.pic9, R.drawable.pic10,
+           R.drawable.pic9, R.drawable.pic10,R.drawable.pic11,
+           R.drawable.pic12, R.drawable.pic13,R.drawable.pic14,
+           R.drawable.pic5, R.drawable.pic16,
    }; 
   
    private GameBoard board;
@@ -84,6 +90,11 @@ public final class PuzzleActivity extends Activity {
       super.onCreate(savedInstanceState);
       this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//sets the orientation to portrait
       setContentView(R.layout.board);
+      
+	  // 实例化广告条
+	  AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+	  RelativeLayout adLayout=(RelativeLayout)findViewById(R.id.AdLayout3);
+	  adLayout.addView(adView);
       
 	  // 加载插播资源
 	  SpotManager.getInstance(this).loadSpotAds();
