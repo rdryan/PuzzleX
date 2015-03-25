@@ -17,7 +17,7 @@ Copyright (C) 2011  Wade Chatam
 
 package com.xiaorui.puzzlex; 
 
-import com.samsung.android.sdk.multiwindow.SMultiWindow;
+//import com.samsung.android.sdk.multiwindow.SMultiWindow;
 
 import net.youmi.android.AdManager;
 import android.app.Activity;
@@ -40,7 +40,7 @@ import android.view.View.OnClickListener;
 public final class IntroActivity extends Activity implements OnClickListener{
 
    public static final int DIALOG_ABOUT_ID = 0;
-   private SMultiWindow mMultiWindow = null;
+//   private SMultiWindow mMultiWindow = null;
    
    @Override
    public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public final class IntroActivity extends Activity implements OnClickListener{
       findViewById(R.id.settings_button).setOnClickListener(this);
       findViewById(R.id.about_button).setOnClickListener(this);
       
-      mMultiWindow = new SMultiWindow();
+//      mMultiWindow = new SMultiWindow();
       
 	  // 初始化接口，应用启动的时候调用
 	  // 参数：appId, appSecret, 调试模式
