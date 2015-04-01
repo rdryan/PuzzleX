@@ -14,26 +14,27 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center"
-	        android:textSize="48sp"
-	        android:textColor="@color/intro_text"
-	        android:layout_marginBottom="25dip"
-	        android:text="@string/app_name" />
-	    <Button 
+	        android:layout_marginBottom="35dip"
+	        android:drawableLeft="@drawable/puzzlex" />
+	    <TextView 
 	        android:id="@+id/play_button"
-	        android:layout_width="fill_parent"
+	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginBottom="5dip"
-	        android:text="@string/play" />
-	    <Button 
+	        android:layout_gravity="center"
+	        android:layout_marginBottom="20dip"			
+	        android:drawableLeft="@drawable/start"/>
+	    <TextView
 	        android:id="@+id/settings_button"
-	        android:layout_width="fill_parent"
+	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginBottom="5dip"
-	        android:text="@string/settings" />
-	    <Button 
+	        android:layout_gravity="center"
+	        android:layout_marginBottom="20dip"
+	        android:drawableLeft="@drawable/setting" />
+	    <TextView
 	        android:id="@+id/about_button"
-	        android:layout_width="fill_parent"
+	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="@string/about" />
+	        android:layout_gravity="center"
+	        android:drawableLeft="@drawable/about" />
     </LinearLayout>
 </LinearLayout>
