@@ -21,9 +21,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import net.youmi.android.banner.AdSize;
-import net.youmi.android.banner.AdView;
-import net.youmi.android.spot.SpotManager;
+//import net.youmi.android.banner.AdSize;
+//import net.youmi.android.banner.AdView;
+//import net.youmi.android.spot.SpotManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -90,18 +90,18 @@ public final class PuzzleActivity extends Activity {
       setContentView(R.layout.board);
       
 	  // 实例化广告条
-	  AdView adView = new AdView(this, AdSize.FIT_SCREEN);
-	  RelativeLayout adLayout=(RelativeLayout)findViewById(R.id.AdLayout3);
-	  adLayout.addView(adView);
+	  //AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+	  //RelativeLayout adLayout=(RelativeLayout)findViewById(R.id.AdLayout3);
+	  //adLayout.addView(adView);
       
 	  // 加载插播资源
-	  SpotManager.getInstance(this).loadSpotAds();
+	  //SpotManager.getInstance(this).loadSpotAds();
 	  // 设置展示超时时间，加载超时则不展示广告，默认0，代表不设置超时时间
-	  SpotManager.getInstance(this).setSpotTimeout(5000);   // 设置5秒
-	  SpotManager.getInstance(this).setShowInterval(20);    // 设置20秒的显示时间间隔	  
+	  //SpotManager.getInstance(this).setSpotTimeout(5000);   // 设置5秒
+	  //SpotManager.getInstance(this).setShowInterval(20);    // 设置20秒的显示时间间隔	  
 	  // 如需要使用自动关闭插屏功能，请取消注释下面方法
-	  SpotManager.getInstance(this).setAutoCloseSpot(false); // 设置自动关闭插屏开关
-	  SpotManager.getInstance(this).setCloseTime(6000);     // 设置关闭插屏时间
+	  //SpotManager.getInstance(this).setAutoCloseSpot(false); // 设置自动关闭插屏开关
+	  //SpotManager.getInstance(this).setCloseTime(6000);     // 设置关闭插屏时间
 	  
 	  //使用SoundPool播放音效
 	  snd = new SoundPool(3,AudioManager.STREAM_SYSTEM,5);
@@ -358,7 +358,7 @@ public final class PuzzleActivity extends Activity {
          });
          dialog = builder.create();         
    	     //Show Ads
-   	     SpotManager.getInstance(this).showSpotAds(this);   	     
+   	     //SpotManager.getInstance(this).showSpotAds(this);   	     
          break;
       default:
          dialog = null;
@@ -394,13 +394,13 @@ public final class PuzzleActivity extends Activity {
    @Override
    protected void onStop() {
       // 如果不调用此方法，则按home键的时候会出现图标无法显示的情况。
-	  SpotManager.getInstance(this).disMiss(false);
+	  //SpotManager.getInstance(this).disMiss(false);
 	  super.onStop();
    }
 
    @Override
    protected void onDestroy() {
-	  SpotManager.getInstance(this).unregisterSceenReceiver();
+	  //SpotManager.getInstance(this).unregisterSceenReceiver();
 	  super.onDestroy();
    }
    

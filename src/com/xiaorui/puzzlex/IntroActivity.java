@@ -19,7 +19,7 @@ package com.xiaorui.puzzlex;
 
 //import com.samsung.android.sdk.multiwindow.SMultiWindow;
 
-import net.youmi.android.AdManager;
+//import net.youmi.android.AdManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -54,7 +54,7 @@ public final class IntroActivity extends Activity implements OnClickListener{
       
 	  // 初始化接口，应用启动的时候调用
 	  // 参数：appId, appSecret, 调试模式
-	  AdManager.getInstance(this).init("9fec3ba849266a59", "33798bb5602a4ee8", false);
+	  //AdManager.getInstance(this).init("9fec3ba849266a59", "33798bb5602a4ee8", false);
 		 
    }
 

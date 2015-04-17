@@ -17,10 +17,10 @@ Copyright (C) 2014  Xiao Rui
 
 package com.xiaorui.puzzlex; 
 
-import net.youmi.android.banner.AdSize;
-import net.youmi.android.banner.AdView;
-import net.youmi.android.diy.banner.DiyAdSize;
-import net.youmi.android.diy.banner.DiyBanner;
+//import net.youmi.android.banner.AdSize;
+//import net.youmi.android.banner.AdView;
+//import net.youmi.android.diy.banner.DiyAdSize;
+//import net.youmi.android.diy.banner.DiyBanner;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
