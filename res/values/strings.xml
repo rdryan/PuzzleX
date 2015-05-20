@@ -5,7 +5,6 @@
     <string name="about">About</string>
     <string name="settings">Settings</string>
     <string name="ok">OK</string>
-    <string name="steps"></string>
     <string name="choosepic">Please choose a picture</string>
     <string name="new_picture">New Picture</string>
     <string name="reshuffle">Reshuffle</string>
@@ -23,4 +22,6 @@ PuzzleX V1.3\n\n
 Copyright (c) 2015\n
 rdryan@sina.com\n    
     </string>
+    <string name="step">step</string>
+    <string name="time">time</string>
 </resources>

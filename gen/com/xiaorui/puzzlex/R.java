@@ -57,16 +57,16 @@ public final class R {
     }
     public static final class id {
         public static final int AdLayout2=0x7f0b0008;
-        public static final int AdLayout3=0x7f0b0002;
         public static final int GridView1=0x7f0b0007;
         public static final int about_button=0x7f0b0005;
         public static final int choosetext=0x7f0b0006;
         public static final int new_picture=0x7f0b0009;
-        public static final int parentLayout=0x7f0b0001;
+        public static final int parentLayout=0x7f0b0002;
         public static final int play_button=0x7f0b0003;
         public static final int reshuffle=0x7f0b000a;
         public static final int settings_button=0x7f0b0004;
-        public static final int show=0x7f0b0000;
+        public static final int step=0x7f0b0000;
+        public static final int time=0x7f0b0001;
     }
     public static final class layout {
         public static final int board=0x7f030000;
@@ -83,24 +83,25 @@ public final class R {
     }
     public static final class string {
         public static final int about=0x7f090002;
-        public static final int about_text=0x7f090012;
+        public static final int about_text=0x7f090011;
         public static final int app_name=0x7f090000;
-        public static final int choosepic=0x7f090006;
-        public static final int congratulations=0x7f090011;
-        public static final int grid_size_summary=0x7f090010;
-        public static final int grid_size_title=0x7f09000f;
-        public static final int hide_numbers=0x7f09000b;
-        public static final int new_picture=0x7f090007;
+        public static final int choosepic=0x7f090005;
+        public static final int congratulations=0x7f090010;
+        public static final int grid_size_summary=0x7f09000f;
+        public static final int grid_size_title=0x7f09000e;
+        public static final int hide_numbers=0x7f09000a;
+        public static final int new_picture=0x7f090006;
         public static final int ok=0x7f090004;
-        public static final int picasa_error=0x7f09000e;
+        public static final int picasa_error=0x7f09000d;
         public static final int play=0x7f090001;
-        public static final int reshuffle=0x7f090008;
+        public static final int reshuffle=0x7f090007;
         public static final int settings=0x7f090003;
-        public static final int show_numbers=0x7f090009;
-        public static final int show_numbers_summary=0x7f09000a;
-        public static final int sound_effects=0x7f09000c;
-        public static final int sound_effects_summary=0x7f09000d;
-        public static final int steps=0x7f090005;
+        public static final int show_numbers=0x7f090008;
+        public static final int show_numbers_summary=0x7f090009;
+        public static final int sound_effects=0x7f09000b;
+        public static final int sound_effects_summary=0x7f09000c;
+        public static final int step=0x7f090012;
+        public static final int time=0x7f090013;
     }
     public static final class xml {
         public static final int settings=0x7f050000;

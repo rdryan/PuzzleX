@@ -36,14 +36,17 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Chronometer;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 /**
  * This is the primary @class Activity for the PhotoGaffe application.  It
@@ -78,6 +81,8 @@ public final class PuzzleActivity extends Activity {
    private int boardWidth;
    private int boardHeight;
    private int boardSZ;
+   public static TextView mCounter;
+   public static Chronometer mChronometer;
    
    private boolean numbersVisible = false; // Whether a title is displayed that
                                   // shows the correct location of the
@@ -88,6 +93,12 @@ public final class PuzzleActivity extends Activity {
       super.onCreate(savedInstanceState);
       this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//sets the orientation to portrait
       setContentView(R.layout.board);
+
+      mCounter = (TextView)findViewById(R.id.step);
+      mCounter.setText("0");
+
+      mChronometer = (Chronometer)findViewById(R.id.time);
+      mChronometer.setFormat("%h:%m:%s");
       
 	  // 实例化广告条
 	  //AdView adView = new AdView(this, AdSize.FIT_SCREEN);
@@ -395,12 +406,14 @@ public final class PuzzleActivity extends Activity {
    protected void onStop() {
       // 如果不调用此方法，则按home键的时候会出现图标无法显示的情况。
 	  //SpotManager.getInstance(this).disMiss(false);
+      mChronometer.stop();
 	  super.onStop();
    }
 
    @Override
    protected void onDestroy() {
 	  //SpotManager.getInstance(this).unregisterSceenReceiver();
+      mChronometer.setBase(SystemClock.elapsedRealtime());
 	  super.onDestroy();
    }
    

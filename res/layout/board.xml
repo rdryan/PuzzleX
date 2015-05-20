@@ -6,17 +6,40 @@
     android:layout_height="fill_parent"
     >
 
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+
+    <TextView android:id="@+id/step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="@string/step"
+        android:textColor="#ff7cff43"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+
+    <Chronometer android:id="@+id/time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="#ff7cff43"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:format="%h:%m:%s" />
+
+</LinearLayout>
 <TableLayout
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:gravity="center"
 >
   
-<TextView android:id="@+id/show" 
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
-    android:text="@string/steps"
-    android:layout_margin="0dp" />
 
 <TableLayout android:id="@+id/parentLayout"
     android:layout_width="wrap_content"
@@ -26,12 +49,5 @@
 
 </TableLayout>   
 
-<RelativeLayout android:id="@+id/AdLayout3"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
-	android:orientation="vertical"
-	android:layout_alignParentTop="true"
-	android:gravity="center_horizontal">
-</RelativeLayout>
 
 </RelativeLayout>
